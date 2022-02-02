@@ -1,0 +1,12 @@
+.small-circle {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  background-color: rgb(180, 158, 180);
+}
+
+.img-category {
+width: 250px;
+height: 250px;
+}
