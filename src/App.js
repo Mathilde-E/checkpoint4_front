@@ -21,7 +21,7 @@ function App() {
 
   const fetchData = () => {
     axios.get('http://localhost:5000/content/1')
-    .then(res => setContent(res.data));
+    .then(res => setContent(res.data[0]));
     console.log(content);
   }
 

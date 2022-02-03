@@ -9,7 +9,7 @@ const Title = (props) => {
       {/* <FaPen 
         style={{ 'color':'rgb(180, 158, 180)'}}
         onClick={() => handleTitle(prompt('Nouveau texte'), text[0]?.id)}/> */}
-      <p>{props.text}</p>
+      <h1>{props.text}</h1>
     </div>
   );
 };
