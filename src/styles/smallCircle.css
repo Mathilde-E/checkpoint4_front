@@ -1,4 +1,6 @@
 .small-circle {
+  display: table;
+  position: relative;
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -6,7 +8,15 @@
   background-color: rgb(180, 158, 180);
 }
 
-.img-category {
-width: 250px;
-height: 250px;
+.small-circle p {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.small-circle:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
 }

@@ -14,8 +14,20 @@
 
 .circle-path{
   position: absolute;
-  top: 45%;
-  left: 15%;
+  top: 40%;
+  left: 20%;
+}
+
+.circle-tools {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+.circle-creations {
+  position: absolute;
+  top: 40%;
+  left: 65%;
 }
 
 @media screen and (max-width: 700px){

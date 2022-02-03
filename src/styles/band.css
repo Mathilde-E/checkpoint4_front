@@ -1,0 +1,71 @@
+.band {
+  background-color: rgba(0, 0, 0, 0.726);
+  display: flex;
+  justify-content: space-between;
+  height: 22px;
+  margin: 0;
+  font-size: 8.5px;
+  color: rgb(202, 202, 202);
+  padding-top:6px
+}
+
+.band-mobile {
+  background-color: rgba(0, 0, 0, 0.726);
+  display: none;
+  justify-content: space-between;
+  height: 20px;
+  margin: 0;
+  font-size: 8.5px;
+  padding-top: 5px;
+  color: rgb(202, 202, 202);
+}
+
+@media (max-width: 450px) {
+  .band {
+    display: none;
+    font-size:8.5px;
+  }
+
+  .band-mobile {
+    display: flex;
+  }
+}
+
+@media (min-width: 550px) {
+  .band {
+    font-size: 9.5px;
+  }
+}
+
+.band a, .band-mobile a {
+  text-decoration: none;
+  color: rgb(202, 202, 202);
+}
+
+.band-infos {
+  display: flex;
+}
+
+.band-infos p {
+  margin-left:10px;
+}
+
+.band-users {
+  display: flex;
+}
+
+.band a:hover, .band-mobile a:hover {
+  color:rgb(57, 57, 238);
+}
+
+.band-users p {
+  margin-right:10px;
+}
+
+.band-clickable {
+  cursor: pointer;
+}
+
+.band-clickable:hover {
+  color:rgb(57, 57, 238);
+}
