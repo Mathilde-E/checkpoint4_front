@@ -8,40 +8,39 @@ import tools from './tools.jpeg';
 import creations from './creations.jpg~';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Parcours from './components/Parcours';
 
 /* eslint-disable no-unused-expressions */
 
 function App() {
-
+  const [parcoursOpen, setParcoursOpen] = useState(false);
   const [content, setContent] = useState('');
+  // const [categ, setCateg] = useState([]);
 
   useEffect(()=> {
-    fetchData()
+   axios.get('http://localhost:5000/content')
+   .then((response) => setContent(response.data[0]))
   }, [])
-
-  const fetchData = () => {
-    axios.get('http://localhost:5000/content/1')
-    .then(res => setContent(res.data[0]));
-    console.log(content);
-  }
 
   return (
     <div className="web-page" >
       <div className="circle-photo" >
       <Circle photo={thinkingWoman} title="À PROPOS DE MOI" />
       </div>
-      <div className="circle-path">
-        <SmallCircle img={path} title="PARCOURS" />
+      <div className="circle-path" onClick={()=> setParcoursOpen(true)}>
+        <SmallCircle img={path} title="PARCOURS"/>
       </div>
+      <Parcours isOpen={parcoursOpen} onRequestClose={()=> setParcoursOpen(false)}/>
       <div className="circle-tools">
         <SmallCircle img={tools} title="OUTILS ET LANGUAGES" />
       </div>
       <div className="circle-creations">
         <SmallCircle img={creations} title="CRÉATIONS" />
       </div>
-      <TitlePage 
-       text={content.text}
-     />
+      <TitlePage
+      content={content}
+      />
+     <div className='admin-panel'></div>
     </div>
   );
 }
