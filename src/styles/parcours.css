@@ -1,0 +1,24 @@
+.modal-parcours {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+height: 800px;
+width: 800px;
+border-radius: 50%;
+background-color:azure; 
+text-align: center;
+vertical-align: middle;
+padding: 1em;
+display: flex;
+flex-direction: column;
+gap: 1em;
+}
+
+.body-parcours {
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.body-parcours p {
+  text-align: left;
+}

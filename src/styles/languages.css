@@ -1,0 +1,21 @@
+.modal-languages {
+  position: absolute;
+  top: 2em;
+  left: 20em;
+height: 700px;
+width: 700px;
+border-radius: 50%;
+background-color:azure; 
+text-align: center;
+vertical-align: middle;
+padding: 1em;
+display: flex;
+flex-direction: column;
+gap: 1em;
+}
+
+.lang-img {
+  height: 50px;
+  width: 50px;
+}
+
