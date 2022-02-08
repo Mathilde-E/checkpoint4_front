@@ -1,9 +1,9 @@
-.modal-parcours {
+.modal-languages {
   position: absolute;
   top: 2em;
-  left: 2em;
-height: 800px;
-width: 800px;
+  left: 20em;
+height: 700px;
+width: 700px;
 border-radius: 50%;
 background-color:azure; 
 text-align: center;
@@ -14,11 +14,8 @@ flex-direction: column;
 gap: 1em;
 }
 
-.body-parcours {
-  margin-left: 5em;
-  margin-right: 5em;
+.lang-img {
+  height: 50px;
+  width: 50px;
 }
 
-.body-parcours p {
-  text-align: left;
-}

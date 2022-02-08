@@ -9,11 +9,14 @@ import creations from './creations.jpg~';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Parcours from './components/Parcours';
+import Languages from './components/Languages';
+import AdminPanel from './components/AdminPanel';
 
 /* eslint-disable no-unused-expressions */
 
 function App() {
   const [parcoursOpen, setParcoursOpen] = useState(false);
+  const [languagesOpen, setLanguagesOpen]= useState(false);
   const [content, setContent] = useState('');
   // const [categ, setCateg] = useState([]);
 
@@ -31,16 +34,19 @@ function App() {
         <SmallCircle img={path} title="PARCOURS"/>
       </div>
       <Parcours isOpen={parcoursOpen} onRequestClose={()=> setParcoursOpen(false)}/>
-      <div className="circle-tools">
+      <div className="circle-tools" onClick={()=> setLanguagesOpen(true)}>
         <SmallCircle img={tools} title="OUTILS ET LANGUAGES" />
       </div>
+      <Languages isOpen={languagesOpen} onRequestClose={()=> setLanguagesOpen(false)}/>
       <div className="circle-creations">
         <SmallCircle img={creations} title="CRÉATIONS" />
       </div>
       <TitlePage
       content={content}
       />
-     <div className='admin-panel'></div>
+     <div className='admin-panel'>
+       <AdminPanel />
+     </div>
     </div>
   );
 }
